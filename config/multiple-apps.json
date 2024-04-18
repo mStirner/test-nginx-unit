@@ -1,0 +1,38 @@
+{
+    "listeners":{
+        "127.0.0.1:8301": {
+            "pass": "applications/417fd251-a356-437c-81e1-7d967c18d0dd"
+        },
+        "127.0.0.1:8302": {
+            "pass": "applications/c4bb95ab-802e-4283-9b22-0abc978803f5"
+        }
+    },
+    "applications":    {
+        "417fd251-a356-437c-81e1-7d967c18d0dd": {
+            "type": "external",
+            "executable": "/home/marc/.nvm/versions/node/v20.11.1/bin/node",
+            "working_directory": "/home/marc/projects/playground/nginx-unit/",
+            "arguments": [
+                "--loader",
+                "unit-http/loader.mjs",
+                "--require",
+                "unit-http/loader",
+                "server.mjs",
+                "417fd251-a356-437c-81e1-7d967c18d0dd"
+            ]
+        },
+        "c4bb95ab-802e-4283-9b22-0abc978803f5": {
+            "type": "external",
+            "executable": "/home/marc/.nvm/versions/node/v20.11.1/bin/node",
+            "working_directory": "/home/marc/projects/playground/nginx-unit/",
+            "arguments": [
+                "--loader",
+                "unit-http/loader.mjs",
+                "--require",
+                "unit-http/loader",
+                "server.mjs",
+                "c4bb95ab-802e-4283-9b22-0abc978803f5"
+            ]
+        }
+    }
+}

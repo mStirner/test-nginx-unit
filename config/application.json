@@ -1,0 +1,28 @@
+{
+    "listeners":{
+        "127.0.0.1:8300": {
+            "pass": "applications/417fd251-a356-437c-81e1-7d967c18d0dd"
+        }
+    },
+    "applications":    {
+        "417fd251-a356-437c-81e1-7d967c18d0dd": {
+        "type": "external",
+        "executable": "/home/marc/.nvm/versions/node/v20.11.1/bin/node",
+        "working_directory": "/home/marc/projects/playground/nginx-unit/",
+        "arguments": [
+            "--loader",
+            "unit-http/loader.mjs",
+            "--require",
+            "unit-http/loader",
+            "server.mjs"
+        ],
+        "environment": {
+            "DJANGO_SETTINGS_MODULE": "blog.settings.prod",
+            "DB_ENGINE": "django.db.backends.postgresql",
+            "DB_NAME": "blog",
+            "DB_HOST": "192.168.122.123",
+            "DB_PORT": "5432"
+        }
+    }
+}
+}
